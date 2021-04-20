@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 
 import api from '~/services/api';
@@ -8,6 +8,7 @@ import DefaultLayout from '../_layouts/default';
 import Spinner from '~/components/Spinner';
 
 import RepoList from './RepoList';
+import StarredList from './StarredList';
 
 import { Container } from './styles';
 import UserInfo from './UserInfo';
@@ -18,6 +19,7 @@ const UserDetails = () => {
   const [user, setUser] = useState({});
   const [loading, setLoading] = useState(false);
   const [showError, setShowError] = useState(false);
+  const [isShowRepos, setIsShowRepos] = useState(true);
 
   useEffect(async () => {
     try {
@@ -37,6 +39,17 @@ const UserDetails = () => {
     }
   }, []);
 
+  const handleStarredClick = useCallback((e) => {
+    console.log(e);
+    e.preventDefault();
+
+    setIsShowRepos(false);
+  }, []);
+
+  const handleRepoClick = useCallback(() => {
+    setIsShowRepos(true);
+  }, []);
+
   return (
     <DefaultLayout>
       <Container>
@@ -46,8 +59,15 @@ const UserDetails = () => {
 
         {!loading && JSON.stringify(user) !== '{}' && (
           <>
-            <UserInfo user={user} />
-            <RepoList username={user.login} />
+            <UserInfo
+              user={user}
+              handleStarredClick={handleStarredClick}
+              handleRepoClick={handleRepoClick}
+            />
+
+            {isShowRepos && <RepoList username={user.login} />}
+
+            {!isShowRepos && <StarredList username={user.login} />}
           </>
         )}
       </Container>

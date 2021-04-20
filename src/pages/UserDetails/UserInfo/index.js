@@ -2,7 +2,7 @@ import { GoStar, GoRepo } from 'react-icons/go';
 
 import { Container, Avatar, Username, Navigation, Button } from './styles';
 
-const UserInfo = ({ user }) => {
+const UserInfo = ({ user, handleStarredClick, handleRepoClick }) => {
   return (
     <Container>
       <Avatar src={user.avatar_url} alt="Avatar" />
@@ -10,10 +10,10 @@ const UserInfo = ({ user }) => {
       <Username>{user.login}</Username>
 
       <Navigation>
-        <Button>
+        <Button onClick={handleStarredClick}>
           <GoStar />
         </Button>
-        <Button>
+        <Button onClick={handleRepoClick}>
           <GoRepo />
         </Button>
       </Navigation>
