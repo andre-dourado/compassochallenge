@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
-import { GoStar, GoRepo } from 'react-icons/go';
 
 import api from '~/services/api';
 
@@ -8,7 +7,10 @@ import DefaultLayout from '../_layouts/default';
 
 import Spinner from '~/components/Spinner';
 
-import { Container, Avatar, Username, Navigation, Button } from './styles';
+import RepoList from './RepoList';
+
+import { Container } from './styles';
+import UserInfo from './UserInfo';
 
 const UserDetails = () => {
   const { username } = useParams();
@@ -44,18 +46,8 @@ const UserDetails = () => {
 
         {!loading && JSON.stringify(user) !== '{}' && (
           <>
-            <Avatar src={user.avatar_url} alt="Avatar" />
-
-            <Username>{user.login}</Username>
-
-            <Navigation>
-              <Button>
-                <GoStar />
-              </Button>
-              <Button>
-                <GoRepo />
-              </Button>
-            </Navigation>
+            <UserInfo user={user} />
+            <RepoList username={user.login} />
           </>
         )}
       </Container>
