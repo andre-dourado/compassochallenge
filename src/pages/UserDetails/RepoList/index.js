@@ -2,6 +2,8 @@ import { useEffect, useState } from 'react';
 
 import api from '~/services/api';
 
+import Spinner from '~/components/Spinner';
+
 import RepoItem from './RepoItem';
 
 import { Container } from './styles';
@@ -31,16 +33,21 @@ const RepoList = ({ username }) => {
 
   return (
     <Container>
-      {repos.map((repo) => (
-        <RepoItem
-          key={repo.id}
-          ownerUsername={repo.owner.login}
-          name={repo.name}
-          forksCount={repo.forks_count}
-          stargazersCount={repo.stargazers_count}
-          language={repo.language}
-        />
-      ))}
+      {loading && <Spinner />}
+
+      {!loading && showError && 'Nenhum repositório encontrado'}
+
+      {!loading &&
+        repos.map((repo) => (
+          <RepoItem
+            key={repo.id}
+            ownerUsername={repo.owner.login}
+            name={repo.name}
+            forksCount={repo.forks_count}
+            stargazersCount={repo.stargazers_count}
+            language={repo.language}
+          />
+        ))}
     </Container>
   );
 };
