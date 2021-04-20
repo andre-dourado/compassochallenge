@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import { GoChevronRight } from 'react-icons/go';
 
 import { Container, Username, Avatar } from './styles';
@@ -7,7 +8,9 @@ const UserItem = ({ login, avatarUrl }) => {
     <Container>
       <Avatar src={avatarUrl} />
       <Username>{login}</Username>
-      <GoChevronRight />
+      <Link to={login}>
+        <GoChevronRight />
+      </Link>
     </Container>
   );
 };
