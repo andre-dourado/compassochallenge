@@ -14,6 +14,7 @@ import { Container, List } from './styles';
 const Home = () => {
   const [users, setUsers] = useState([]);
   const [loading, setLoading] = useState(false);
+  const [showError, setShowError] = useState(false);
 
   const fetchUser = useCallback(async ({ search }) => {
     try {
@@ -23,8 +24,11 @@ const Home = () => {
       const { data } = await api.get(request.trim());
 
       setUsers([data]);
+      setShowError(false);
     } catch (err) {
-      throw new Error(err);
+      if (err.response.status == 404) {
+        setShowError(true);
+      }
     } finally {
       setLoading(false);
     }
@@ -37,7 +41,9 @@ const Home = () => {
 
         {loading && <Spinner />}
 
-        {!loading && (
+        {!loading && showError && 'Nenhum usuário encontrado'}
+
+        {!loading && !showError && (
           <List>
             {users.map((user) => (
               <UserItem
