@@ -39,9 +39,6 @@ const UserDetails = () => {
   }, []);
 
   const handleStarredClick = useCallback((e) => {
-    console.log(e);
-    e.preventDefault();
-
     setIsShowRepos(false);
   }, []);
 
