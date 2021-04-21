@@ -38,7 +38,7 @@ const UserDetails = () => {
     }
   }, []);
 
-  const handleStarredClick = useCallback((e) => {
+  const handleStarredClick = useCallback(() => {
     setIsShowRepos(false);
   }, []);
 
