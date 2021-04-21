@@ -25,8 +25,7 @@ const UserDetails = () => {
     try {
       setLoading(true);
 
-      const request = `${process.env.REACT_APP_GITHUB_API_URL}/users/${username}`;
-      const { data } = await api.get(request.trim());
+      const { data } = await api.get(`/users/${username}`);
 
       setUser(data);
     } catch (err) {

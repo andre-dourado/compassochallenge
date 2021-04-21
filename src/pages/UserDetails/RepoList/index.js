@@ -17,8 +17,7 @@ const RepoList = ({ username }) => {
     try {
       setLoading(true);
 
-      const request = `${process.env.REACT_APP_GITHUB_API_URL}/users/${username}/repos`;
-      const { data } = await api.get(request.trim());
+      const { data } = await api.get(`/users/${username}/repos`);
 
       setRepos(data);
     } catch (err) {
