@@ -10,11 +10,11 @@ const UserInfo = ({ user, handleStarredClick, handleRepoClick }) => {
       <Username>{user.login}</Username>
 
       <Navigation>
-        <Button onClick={handleStarredClick}>
-          <GoStar />
-        </Button>
         <Button onClick={handleRepoClick}>
           <GoRepo />
+        </Button>
+        <Button onClick={handleStarredClick}>
+          <GoStar />
         </Button>
       </Navigation>
     </Container>
