@@ -1,70 +1,49 @@
-# Getting Started with Create React App
+<h1 align="center">
+    Compasso Challenge
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+  <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/andrewdourado/compassochallenge.svg">
 
-## Available Scripts
+  <img alt="Repository size" src="https://img.shields.io/github/repo-size/andrewdourado/compassochallenge.svg">
+  
+  <a href="https://github.com/andrewdourado/git-star/commits/master">
+    <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/andrewdourado/compassochallenge.svg">
+  </a>
 
-In the project directory, you can run:
+  <a href="https://github.com/andrewdourado/git-star/issues">
+    <img alt="Repository issues" src="https://img.shields.io/github/issues/andrewdourado/compassochallenge.svg">
+  </a>
+</p>
 
-### `yarn start`
+<h4 align="center">
+  Desafio lançado pela equipe da Compasso Uol. A ideia é buscar e visualizar os detalhes do usuário do GitHub.
+</h4>
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![App Screenshot](https://res.cloudinary.com/andredourado/image/upload/v1618958660/compassochallenge/preview-compassochallenge.png)
+<p align="center">
+  <a href="https://compassochallenge.netlify.app" target="_blank">
+    <img alt="Demo on Netlify" src="https://res.cloudinary.com/andredourado/image/upload/v1591309503/demo_on_netlify_bbuvjz_gunwwk.png">
+  </a>
+</p>
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## :rocket: Tecnologias
 
-### `yarn test`
+Este projeto foi desenvolvido com as seguinte tecnologias:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- [react.js](https://reactjs.org/)
+- [react-router-dom](https://github.com/ReactTraining/react-router)
+- [styled-components](https://www.styled-components.com/)
+- [axios](https://github.com/axios/axios)
+- [react-icons](https://react-icons.github.io/react-icons/)
+- [VS Code][vscode] with [EditorConfig][vceditconfig] and [ESLint][vceslint]
 
-### `yarn build`
+---
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Made with ♥ by André Dourado :wave: [Get in touch!](https://www.linkedin.com/in/andre-dourado/)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `yarn eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+[ts]: https://www.typescriptlang.org
+[vscode]: https://code.visualstudio.com/
+[yarn]: https://yarnpkg.com/
+[vceditconfig]: https://marketplace.visualstudio.com/items?itemName=EditorConfig.EditorConfig
+[vceslint]: https://marketplace.visualstudio.com/items?itemName=dbaeumer.vscode-eslint
