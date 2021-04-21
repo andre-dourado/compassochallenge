@@ -5,13 +5,14 @@ import { Container, Username, Avatar } from './styles';
 
 const UserItem = ({ login, avatarUrl }) => {
   return (
-    <Container>
-      <Avatar src={avatarUrl} />
-      <Username>{login}</Username>
-      <Link to={login}>
+    <Link to={login}>
+      <Container>
+        <Avatar src={avatarUrl} />
+        <Username>{login}</Username>
+
         <GoChevronRight />
-      </Link>
-    </Container>
+      </Container>
+    </Link>
   );
 };
 
